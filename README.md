@@ -1,6 +1,6 @@
 # @shgysk8zer0/schema
 
-A collection of JS classes implementing types for schema.org 
+A collection of JS classes implementing types for schema.org
 
 [![CodeQL](https://github.com/shgysk8zer0/schemaJS/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/shgysk8zer0/schemaJS/actions/workflows/codeql-analysis.yml)
 ![Node CI](https://github.com/shgysk8zer0/schemaJS/workflows/Node%20CI/badge.svg)
