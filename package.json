@@ -1,8 +1,14 @@
 {
   "name": "@shgysk8zer0/schema",
   "version": "0.0.1",
-  "description": "A template repo for npm packages",
-  "keywords": [],
+  "description": "A collection of JS classes implementing types for schema.org ",
+  "keywords": [
+    'schema',
+    'schema-org',
+    'structured-data',
+    'microdata',
+    'json-ld'
+  ],
   "type": "module",
   "main": "./schema.cjs",
   "module": "./schema.js",
