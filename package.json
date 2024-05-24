@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "description": "A collection of JS classes implementing types for schema.org ",
   "keywords": [
-    'schema',
-    'schema-org',
-    'structured-data',
-    'microdata',
-    'json-ld'
+    "schema",
+    "schema-org",
+    "structured-data",
+    "microdata",
+    "json-ld"
   ],
   "type": "module",
   "main": "./schema.cjs",
