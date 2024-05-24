@@ -1,25 +1,31 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
+import { ls } from '@shgysk8zer0/npm-utils/fs';
+
+const resolve = nodeResolve();
+const ignored = ['.min.js', '.config.js',  'test.js', 'schema.js'];
+
+const modules = await ls('./', {
+	filter: ({ name }) => name.endsWith('.js') && ! ignored.some(end  => name.endsWith(end)),
+});
 
 export default [{
-	input: 'index.js',
-	plugins: [nodeResolve()],
+	input: 'schema.js',
+	plugins: [resolve],
 	output: [{
-		file: 'index.cjs',
+		file: 'schema.cjs',
 		format: 'cjs',
 	}, {
-		file: 'index.min.js',
-		format: 'iife',
-		plugins: [terser()],
-		sourcemap: true,
-	}, {
-		file: 'index.mjs',
+		file: 'schema.mjs',
 		format: 'module',
+		plugins: [terser()],
 	}],
-}, {
-	input: 'consts.js',
+}, ...modules.map(name => ({
+	input: name,
+	plugins: [resolve],
 	output: {
-		file: 'consts.cjs',
+		file: name.replace('.js', '.cjs'),
 		format: 'cjs',
-	}
-}];
+	},
+	external: (_, parent) => parent !== undefined,
+}))];

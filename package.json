@@ -1,16 +1,22 @@
 {
-  "name": "npm-template",
-  "version": "1.1.1",
-  "description": "A template repo for npm packages",
-  "keywords": [],
+  "name": "@shgysk8zer0/schema",
+  "version": "0.0.1",
+  "description": "A collection of JS classes implementing types for schema.org ",
+  "keywords": [
+    "schema",
+    "schema-org",
+    "structured-data",
+    "microdata",
+    "json-ld"
+  ],
   "type": "module",
-  "main": "./index.cjs",
-  "module": "./index.js",
-  "unpkg": "./index.min.js",
+  "main": "./schema.cjs",
+  "module": "./schema.js",
+  "unpkg": "./schema.min.js",
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.cjs"
+      "import": "./schema.js",
+      "require": "./schema.cjs"
     },
     "./*.js": {
       "import": "./*.js",
@@ -50,7 +56,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shgysk8zer0/npm-template.git"
+    "url": "git+https://github.com/shgysk8zer0/schemaJS.git"
   },
   "author": "Chris Zuber <admin@kernvalley.us>",
   "license": "MIT",
@@ -65,9 +71,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/shgysk8zer0/npm-template/issues"
+    "url": "https://github.com/shgysk8zer0/schemaJS/issues"
   },
-  "homepage": "https://github.com/shgysk8zer0/npm-template#readme",
+  "homepage": "https://github.com/shgysk8zer0/schemaJS#readme",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@shgysk8zer0/js-utils": "^1.0.1",
